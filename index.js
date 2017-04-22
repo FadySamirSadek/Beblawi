@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const app = express();
 
+const token = "EAAURZBaIUs8oBACJjFZAdR7u01MZAsIGTphEDqPzZCTWHveUfKePhsxwbASZCeJIDbZC1GjsD9LYQL6WdfeiZCeWZAjPLGqZBuQ7JLev9onRcaFuZB8cpjp2aBUGLZBRkiRr0tNJ8pQR4TZB7ZC8R52Uphiy1f9IoFryDZACk58XZBrE2vYwAZDZD";
+
 app.set('port', (process.env.PORT || 5000));
 
 // Process application/x-www-form-urlencoded
@@ -47,7 +49,6 @@ function sendTextMessage(sender, text) {
 	    }
     })
 }
-const token = "EAAURZBaIUs8oBACJjFZAdR7u01MZAsIGTphEDqPzZCTWHveUfKePhsxwbASZCeJIDbZC1GjsD9LYQL6WdfeiZCeWZAjPLGqZBuQ7JLev9onRcaFuZB8cpjp2aBUGLZBRkiRr0tNJ8pQR4TZB7ZC8R52Uphiy1f9IoFryDZACk58XZBrE2vYwAZDZD";
 // Spin up the server
 app.listen(app.get('port'), function() {
 	console.log('running on port', app.get('port'))
