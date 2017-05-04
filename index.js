@@ -26,6 +26,9 @@ app.post('/webhook/', function (req, res) {
 	    let sender = event.sender.id;
 	    if (event.message && event.message.text) {
 		    let text = event.message.text ;
+				if (text == "location"){
+					sendTextMessage(sender, "https://www.google.com/maps/d/viewer?mid=1I4WHzVNnJfpqbA7eAoD9ubetN0s&hl=en&ll=30.067756999999997%2C31.020659000000023&z=17");
+				}
 		    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200));
 	    }
     }
